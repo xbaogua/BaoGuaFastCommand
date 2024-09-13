@@ -1,0 +1,131 @@
+{
+  "KeyWords": [
+    {
+      "KeyWord": "IPv4",
+      "MatchRegex": "\\b(?<IPv4>(?:\\d{1,3}\\.){3}\\d{1,3})\\b",
+      "Remark": "在这里定义关键字的名称和匹配的正则表达式，工具会按照正则匹配输入数据，关键字名称严格区分大小写"
+    },
+    {
+      "KeyWord": "Domain",
+      "MatchRegex": "(http|https)://(?<Domain>(\\w+\\.)+\\w+)",
+      "Remark": "如果需要使用正则组，组的名称需要与关键字名称保存一致"
+    },
+    {
+      "KeyWord": "SHA256",
+      "MatchRegex": "\\b(?<SHA256>\\w{64})\\b",
+      "Remark": ""
+    },
+    {
+      "KeyWord": "SHA1",
+      "MatchRegex": "\\b(?<SHA1>\\w{40})\\b",
+      "Remark": ""
+    },
+    {
+      "KeyWord": "MD5",
+      "MatchRegex": "\\b(?<MD5>\\w{32})\\b",
+      "Remark": ""
+    }
+  ],
+  "FastCommands": [
+    {
+      "CommandName": "IP信息",
+      "CommandLine": "ipconfig /all",
+      "CommandRemark": ""
+    },
+    {
+      "CommandName": "网络连接",
+      "CommandLine": "netstat -ano",
+      "CommandRemark": ""
+    },
+    {
+      "CommandName": "PING",
+      "CommandLine": "ping {IPv4}",
+      "CommandRemark": "使用大括号和关键字来代替匹配的数值"
+    },
+    {
+      "CommandName": "微步》X社区》IP查询",
+      "CommandLine": "https://x.threatbook.com/v5/ip/{IPv4}",
+      "CommandRemark": ""
+    },
+    {
+      "CommandName": "微步》X社区》域名查询",
+      "CommandLine": "https://x.threatbook.com/v5/domain/{Domain}",
+      "CommandRemark": ""
+    },
+    {
+      "CommandName": "微步》云沙箱》文件HASH查询",
+      "CommandLine": "https://s.threatbook.com/report/file/{SHA256|MD5|SHA1}",
+      "CommandRemark": "如果命令的接口中可以兼容多个关键字，可以使用管道符分隔"
+    },    
+    {
+      "CommandName": "奇安信》威胁情报中心》文件SHA1查询",
+      "CommandLine": "https://ti.qianxin.com/v2/search?type=sha1&value={SHA1}",
+      "CommandRemark": "如果命令的接口中可以兼容多个关键字，可以使用管道符分隔"
+    },
+    {
+      "CommandName": "奇安信》威胁情报中心》文件MD5查询",
+      "CommandLine": "https://ti.qianxin.com/v2/search?type=md5&value={MD5}",
+      "CommandRemark": "如果命令的接口中可以兼容多个关键字，可以使用管道符分隔"
+    },
+    {
+      "CommandName": "奇安信》威胁情报中心》文件SHA256查询",
+      "CommandLine": "https://ti.qianxin.com/v2/search?type=sha256&value={SHA256}",
+      "CommandRemark": "如果命令的接口中可以兼容多个关键字，可以使用管道符分隔"
+    },
+    {
+      "CommandName": "安天》威胁情报中心》IPv4查询",
+      "CommandLine": "https://www.antiycloud.com/#/search/ip?type=ip&key={IPv4}",
+      "CommandRemark": "如果命令的接口中可以兼容多个关键字，可以使用管道符分隔"
+    },
+    {
+      "CommandName": "安天》威胁情报中心》文件查询",
+      "CommandLine": "https://www.antiycloud.com/#/search/hash?type=hash&key={SHA256|MD5|SHA1}",
+      "CommandRemark": "如果命令的接口中可以兼容多个关键字，可以使用管道符分隔"
+    },
+    {
+      "CommandName": "站长工具》SEO综合查询",
+      "CommandLine": "https://seo.chinaz.com/{Domain}",
+      "CommandRemark": ""
+    },
+    {
+      "CommandName": "站长工具》在线Ping检测",
+      "CommandLine": "https://ping.chinaz.com/{IPv4}",
+      "CommandRemark": ""
+    },
+    {
+      "CommandName": "CMDB》IP查询",
+      "CommandLine": "https://cmdb.essence.com.cn/next/search/ip/HOST?q={IPv4}&objectId=HOST",
+      "CommandRemark": ""
+    },
+    {
+      "CommandName": "奇安信》威胁情报中心》IPv4查询",
+      "CommandLine": "https://ti.qianxin.com/v2/search?type=ip&value={IPv4}",
+      "CommandRemark": ""
+    },
+    {
+      "CommandName": "奇安信》威胁情报中心》域名查询",
+      "CommandLine": "https://ti.qianxin.com/v2/search?type=domain&value={Domain}",
+      "CommandRemark": ""
+    },
+    {
+      "CommandName": "360》安全大脑》IP查询",
+      "CommandLine": "https://ti.360.com/ip/{IPv4}",
+      "CommandRemark": ""
+    },
+    {
+      "CommandName": "360》安全大脑》域名查询",
+      "CommandLine": "https://ti.360.com/domain/{Domain}",
+      "CommandRemark": ""
+    },
+    {
+      "CommandName": "360》安全大脑》文件查询",
+      "CommandLine": "https://ti.360.com/file/{SHA256|MD5|SHA1}",
+      "CommandRemark": ""
+    },
+    {
+      "CommandName": "资产测绘》Shodan》IP情况",
+      "CommandLine": "https://www.shodan.io/host/{IPv4}",
+      "CommandRemark": ""
+    }
+  ]
+}
