@@ -1,2 +1,10 @@
 # BaoGuaFastCommand
-宝瓜快速命令工具
+宝瓜快速命令工具  
+
+File: BaoGuaFastCommand.exe  
+Size: 1017679 bytes  
+File Version: 1.0.0.2  
+Modified: 2024年9月13日, 15:06:49  
+MD5: EB436B2EA879B8C6BAFC90022604FACB  
+SHA1: 7032860F6AE45E67684AA3BC0ABB09ACD79034F1  
+CRC32: AB4EED56  
